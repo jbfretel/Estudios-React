@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Person = (props) => {
-  console.log(props);
+const Person = ({name,age}) => { //destructuracion de props forma actual de trabajar con react
   return (
     
-    <p>Soy {props.name} y tengo {props.age} años</p>
+    <p>Soy {name} y tengo {age} años</p>
   )
 
 }
