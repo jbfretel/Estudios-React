@@ -32,6 +32,8 @@ function App(){
   const names = ['Dorian', 'Laura', 'Alex']
 
   // return <h1>{numbers}</h1>
+
+  // manera correcta de leer arrays
   return(
     // <ul>
     //   <li>{names}</li>
