@@ -8,9 +8,33 @@ function App() {
   return (
     <>
       <Header/>
-      <Person name="Carlos" age={28} birthday={new Date(1994,5,4)}/>
-      <Person name="Martha" age={31} birthday={new Date(1990,4,25)}/>
-      <Person name="Emilia" age={53} birthday={new Date(1968,7,14)}/>
+      <Person   //instalar extensión vscode alphabetical sorter uso: ctrl mayus p y buscar la extensión para ordenar alfabeticamente las props, buenas practicas react.
+        info={
+          {
+            age:28, 
+            birthday:new Date(1993,5,4),
+            name:"Carlos" 
+          }
+        }
+      />
+      <Person 
+        info={
+          {
+            age:31, 
+            birthday:new Date(1990,4,25),
+            name:"Martha" 
+          }
+        }
+      />
+      <Person 
+        info={
+          {
+            age:53, 
+            birthday:new Date(1968,7,14),
+            name:"Emilia" 
+          }
+        }
+      />
     </>
     
   );
