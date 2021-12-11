@@ -2,13 +2,15 @@
 import React, { Component } from 'react'
 
 class App extends Component {
-  state = {number:5}
+  // state = {number:5}
+  state = {number:this.props.number} //igualamos a la props en el componente o default en la parte de abajo.
   //las funciones relacionadas con eventos tienen adelande la palabra handle(manejador)
   // handleClick(){   =>de esta forma no funcionara el setState, la mejor manera es usar funciones de flecha.
   //   // console.log("Click");
   //   //NUNCA HACER ESTO
   //   // this.state.number ++
   
+  // se usa setSate para cambiar el estado
   //   this.setState({
   //     number: this.state.number + 1
   //   })
@@ -19,8 +21,7 @@ class App extends Component {
   //     number: this.state.number + 1
   //   })
   // }
-
-  handleIncrement =()=>{ 
+  handleIncrement =()=>{
     this.setState({
       number: this.state.number + 1
     })
@@ -35,7 +36,6 @@ class App extends Component {
       number: 0
     })
   }
-
   render() {
     return (
       <>
@@ -47,6 +47,11 @@ class App extends Component {
       </>
     );
   }
+}
+
+// Propiedades por defecto, si no se pasan prorps en el componente
+App.defaultProps = {
+  number: 0
 }
 
 export default App;
